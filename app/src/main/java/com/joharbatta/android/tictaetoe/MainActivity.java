@@ -104,6 +104,55 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void reset(View view)
+    {
+        gameActive=true;
+        for(int i=0;i<gameValues.length;i++)
+        {
+            gameValues[i]=2;
+        }
+        ((ImageView) findViewById(R.id.imageView0)).setImageResource(0);
+        ((ImageView) findViewById(R.id.imageView1)).setImageResource(0);
+        ((ImageView) findViewById(R.id.imageView2)).setImageResource(0);
+        ((ImageView) findViewById(R.id.imageView3)).setImageResource(0);
+        ((ImageView) findViewById(R.id.imageView4)).setImageResource(0);
+        ((ImageView) findViewById(R.id.imageView5)).setImageResource(0);
+        ((ImageView) findViewById(R.id.imageView6)).setImageResource(0);
+        ((ImageView) findViewById(R.id.imageView7)).setImageResource(0);
+        ((ImageView) findViewById(R.id.imageView8)).setImageResource(0);
+
+
+        if(winnerPlayer == 0)
+        {
+            activePlayer = 0;
+            TextView turn = findViewById(R.id.playerTurn);
+            turn.setText("Tap To Play : O's turn ");
+        }
+        else if(winnerPlayer == 1)
+        {
+            activePlayer = 1;
+            TextView turn = findViewById(R.id.playerTurn);
+            turn.setText("Tap To Play : X's turn ");
+        }
+        else
+        {
+            Random rnd = new Random();
+            activePlayer = rnd.nextInt(2);
+            if(activePlayer == 0) {
+                TextView turn = findViewById(R.id.playerTurn);
+                turn.setText("Tap To Play : O's turn : O's turn ");
+            }
+            else
+            {
+                TextView turn = findViewById(R.id.playerTurn);
+                turn.setText("Tap To Play : O's turn : X's turn ");
+            }
+        }
+
+
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
