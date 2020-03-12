@@ -178,7 +178,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="O's Wins:"
+                android:text="O's Wins: 0"
                 android:textAlignment="center"
                 android:textColor="@color/colortext"
                 android:textSize="26sp" />
@@ -189,7 +189,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:text="X's Wins:"
+                android:text="X's Wins: 0"
                 android:textColor="@color/colortext"
                 android:textSize="26sp" />
         </LinearLayout>
